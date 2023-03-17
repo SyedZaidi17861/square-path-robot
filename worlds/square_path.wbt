@@ -2,8 +2,8 @@
 
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/samples/robotbenchmark/square_path/protos/SquarePathPioneer3dx.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/samples/robotbenchmark/square_path/protos/SquarePathBenchmark.proto"
+EXTERNPROTO "../protos/SquarePathPioneer3dx.proto"
+EXTERNPROTO "../protos/SquarePathBenchmark.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
 
 WorldInfo {
@@ -27,7 +27,8 @@ TexturedBackground {
 }
 DEF PIONEER SquarePathPioneer3dx {
   translation 0 0 0.09439
-  controller "square_path"
+  name "participant"
+  controller "participant"
   controllerArgs [
     "2"
   ]

@@ -1,26 +1,28 @@
-"""Simple robot controller."""
+"""Sample Webots controller for the square path benchmark."""
 
 from controller import Robot
-import sys
-
-# Define the target motor position in radians.
-target = 1
 
 # Get pointer to the robot.
 robot = Robot()
 
-# Print the program output on the console
-print("Move the motors of the Thymio II to position " + str(target) + ".")
+# Get pointer to each wheel of our robot.
+leftWheel = robot.getDevice('left wheel')
+rightWheel = robot.getDevice('right wheel')
 
-# Set the target position of the left and right wheels motors.
-robot.getDevice("motor.left").setPosition(target)
-robot.getDevice("motor.right").setPosition(target)
+# Repeat the following 4 times (once for each side).
+for i in range(0, 4):
+    # First set both wheels to go forward, so the robot goes straight.
+    leftWheel.setPosition(1000)
+    rightWheel.setPosition(1000)
+    # Wait for the robot to reach a corner.
+    robot.step(3900)
+    # Then, set the right wheel backward, so the robot will turn right.
+    leftWheel.setPosition(1000)
+    rightWheel.setPosition(-1000)
+    # Wait until the robot has turned 90 degrees clockwise.
+    robot.step(480)
 
-# Run the simulation for 10 seconds
-robot.step(10000)
-
-# This is the simplest controller that works for this competition
-# If you want to experiment with more complex functions, you can read the programming guide here:
-# https://www.cyberbotics.com/doc/guide/controller-programming?tab-language=python
-# or the Robot() documentation here:
-# https://cyberbotics.com/doc/reference/robot?tab-language=python
+# Stop the robot when path is completed, as the robot performance
+# is only computed when the robot has stopped.
+leftWheel.setVelocity(0)
+rightWheel.setVelocity(0)

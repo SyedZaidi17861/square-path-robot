@@ -4,8 +4,7 @@ simulationViewPerspectives: 000000ff000000010000000200000118000003ca010000000201
 sceneTreePerspectives: 000000ff00000001000000030000001c000000c0000000fa0100000002010000000200
 maximizedDockId: -1
 centralWidgetVisible: 1
-userInteractions: 3dContextMenuDisabled::objectMoveDisabled::forceAndTorqueDisabled
 orthographicViewHeight: 1
-textFiles: 0 "controllers/square_path/square_path.py"
+textFiles: 0 "controllers/participant/participant.py"
 robotWindow: robot
 consoles: Console:All:All

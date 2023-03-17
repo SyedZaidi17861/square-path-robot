@@ -25,8 +25,8 @@ timestep = int(supervisor.getBasicTimeStep())
 pioneer = supervisor.getFromDef('PIONEER')
 
 # Main loop starts here.
-while (supervisor.step(timestep) != -1 and
-       not metric.isBenchmarkOver()):
+while (supervisor.step(timestep) != -1
+       and not metric.isBenchmarkOver()):
 
     # Recovers current time and position/orientation of the robot.
     pos = pioneer.getPosition()
