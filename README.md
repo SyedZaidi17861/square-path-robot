@@ -1,6 +1,6 @@
 <span id="title">
 
-# Competition Organizer Template
+# Square path Competition
 
 </span>
 
@@ -22,7 +22,7 @@ To organize your own competition, follow the instructions in the [ORGANIZER.md](
 
 <span id="description">
 
-Write here a short description of your competition.
+Program a Pioneer 3-DX robot to follow a 2m x 2m square trajectory, quickly and precisely.
 
 </span>
 
@@ -32,10 +32,10 @@ Write here a short description of your competition.
 
 <span id="information">
 
-- Difficulty: Middle School, High School, Bachelor, Master or PhD
-- Robot: robot name
-- Language: programming language of the controller template
-- Commitment: amount of time needed to participate in the competition
+- Difficulty: High School
+- Robot: Pioneer 3-DX
+- Language: Python
+- Commitment: a couple of hours
 
 </span>
 
