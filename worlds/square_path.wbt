@@ -12,7 +12,7 @@ WorldInfo {
     "It has to come back to its starting point."
     "It can only rely on the sensors in its wheels to perform this task. "
   ]
-  title "Square Path"
+  title "Square Path Competition"
   window "square_path"
   basicTimeStep 16
 }
